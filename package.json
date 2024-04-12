@@ -1,0 +1,32 @@
+{
+  "name": "auto_update_debian",
+  "version": "1.0.0",
+  "description": "This app will automatically update all your apps to the latest version.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . app --platform linux --arch X64 --out dist/",
+    "deb64": "electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "owner":"Riya258",
+    "url": "git+https://github.com/Riya258/auto_update_debian.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Riya258/auto_update_debian/issues"
+  },
+  "homepage": "https://github.com/Riya258/auto_update_debian#readme",
+  "devDependencies": {
+    "electron": "^29.3.0",
+    "electron-installer-debian": "^3.2.0",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "electron-log": "^5.1.2",
+    "electron-updater": "^6.1.8"
+  }
+}
